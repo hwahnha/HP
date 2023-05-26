@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.main-menu a {
+    margin: 0 70px;/*메인메뉴끼리 간격*/
+    font-size: 20px; /* 원하는 폰트 크기로 조절하세요 */
+}
+#about {
+    position: relative;
+}
+
+#about:hover {
+    bottom: 40px;/*메인메뉴에 마우스 올리면 이동할 거리*/
+}
+
+.main-content img {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);/*중심점을 맞추기 위해 위와 동일하게*/
+    width: 30%; /* 로고의 가로 크기를 변경합니다. */
+    height: auto; /* height를 auto로 설정하면 가로 크기에 맞춰 자동으로 조절됩니다. */}
+
+.main-content a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #000;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    text-align: left;
+    margin-top: 10px;/*메인메뉴-서브메뉴 사이(상하)간격*/
+    width: 320px; /* 원하는 가로폭으로 조절하세요 */
+}
+
+.submenu a {
+    display: block;
+    margin-top: 10px;/*서브 메뉴 상하 간격*/
+    font-size: 16px; /* 원하는 폰트 크기로 조절하세요 */
+}
+#about:hover .submenu {
+    display: block;
+}
