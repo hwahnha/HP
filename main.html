@@ -3,24 +3,29 @@
 <head>
     <title>나의 웹사이트</title>
     <link rel="stylesheet" href="main styles.css">
-
-    
 </head>
 <body>
+    <div class="container">
+        <button class="button" id="loginButton">로그인</button>
+    </div>
+    
+
     <div class="main-content">
+        <a href="main.html">
         <img src="image/JEL1.png" alt="Logo">
+        </a>
+
         <div class="main-menu">
+
             <div id="about">
-                <a href="#">회사소개</a>
+                <a href="introduce.html">회사소개</a>
                 <div class="submenu">
-                    <a href="#">기업소개</a>
-                    <a href="#">지향 목표</a>
-                    <a href="#">달성 수단</a>
+                    <a href="introduce.html">기업소개</a>
+                    <a href="#">지향목표</a>
+                    <a href="#">달성수단</a>
                     <a href="#">소재지 및 구조</a>
                 </div>
             </div>
-
-
 
             <div id="about">
                 <a href="#">사업분야</a>
@@ -33,15 +38,25 @@
             </div>
 
             <div id="about">
-                <a href="#login">현장 진행</a>
+                <a href="#contact">CONTACT</a>
                 <div class="submenu">
-                    <a href="#">현장 진행자</a>
-                    <a href="#">현장 관리자</a>
                     <a href="#">현장 관계자</a>
+                    <a href="#">현장 공급자</a>
                 </div>
             </div>
 
         </div>
+
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#loginButton').click(function() {
+                window.location.href = 'login_id.html';
+            });
+        });
+    </script>
+
 </body>
 </html>
