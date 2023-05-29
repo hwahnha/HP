@@ -1,10 +1,27 @@
+.button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #dbdbdb;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif; /* 폰트 설정 */
+    font-weight: bold; /* 폰트 무게 설정 */
+    font-size: 14px; /* 폰트 크기 설정 */
+}
+
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
 }
+
 .main-content {
     display: flex;
     flex-direction: column;
@@ -19,6 +36,7 @@ body {
     margin: 0 70px;/*메인메뉴끼리 간격*/
     font-size: 20px; /* 원하는 폰트 크기로 조절하세요 */
 }
+
 #about {
     position: relative;
 }
@@ -29,8 +47,8 @@ body {
 
 .main-content img {
     position: absolute;
-    top: 35%;
     left: 50%;
+    top: 35%;
     transform: translate(-50%, -35%);/*중심점을 맞추기 위해 위와 동일하게*/
     width: 30%; /* 로고의 가로 크기를 변경합니다. */
     height: auto; /* height를 auto로 설정하면 가로 크기에 맞춰 자동으로 조절됩니다. */}
@@ -56,3 +74,4 @@ body {
 #about:hover .submenu {
     display: block;
 }
+
