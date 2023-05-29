@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/design.css">
+</head>
+<body>
+    <div id="login">
+        <h1><img src="image/JEL1.png" alt="주안전기"></h1>
+        <h1>사용자 로그인</h1>
+        <h2><!--구글계정사용--></h2>
+        <form action="login.php" method="post" id="login_form">
+            <fieldset>
+                <legend><!-- 로그인양식 --></legend>
+                <ul>
+                    <li><input type="password" name="user_pw" placeholder="비밀번호" id="userPwInput"></li>
+                    <!-- 다음 버튼 클릭 시 비밀번호 확인 -->
+                    <!-- 이줄은 ID 페이지 복사중에 따라옴<li><a href="#">비밀번호를 잊으셨나요?</a></li> -->
+                </ul>
+                <div class="bottom">
+                    <a href="#" class="find_pw">비밀번호를 잊으셨나요?</a>
+                    <button type="button" id="next_btn">다음</button>
+                </div>
+            </fieldset>
+
+
+        </form>
+        <footer>
+            <select name="lang_select" id="lang_select">
+                <option value="korean">한국어</option>
+            </select>
+            <div class="right">
+                <a href="#">도움말</a>
+                <a href="#">개인정보 처리방침</a>
+                <a href="#">약관</a>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#nextBtn').click(function() {
+                var userPw = $('#userPwInput').val();
+
+                // 서버로 userPw를 전송하여 데이터베이스에서 확인 후 결과에 따라 동작
+                // 백엔드 코드에서 처리해야 함
+
+                // 비밀번호 일치 시
+                // 로그인 완료 후 메인 화면으로 돌아감
+                // 로그인된 상태로 변경된 UI를 처리해야 함
+                window.location.href = 'main.html';
+                // 비밀번호 불일치 시
+                // 처리 방법에 따라 예외 처리
+            });
+        });
+    </script>
+
+</body>
+</html>
